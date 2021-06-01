@@ -1,29 +1,29 @@
 let timer;
-let time = 75;
+let time = 10;
 let qCount = 0;
 let score = 0;
 
 //define questions array of obj
 const questions = [
   {
-    title: "what is your favorite color1?",
-    choices: ["red", "green", "blue", "orange"],
-    answer: "red",
+    title: "What does HTMl stand for?",
+    choices: ["Hyper Tag Markup Language", "Hyper Text Markup Language", "Hyperlinks Text Mark Language", "Hyperlinking Text Marking Language"],
+    answer: "Hyper Text Markup Language",
   },
   {
-    title: "what is your favorite color2?",
-    choices: ["red", "green", "blue", "orange"],
-    answer: "green",
+    title: "The web is based on...",
+    choices: ["Images", "Text", "Information", "HTML"],
+    answer: "HTML",
   },
   {
-    title: "what is your favorite color3?",
-    choices: ["red", "green", "blue", "orange"],
-    answer: "blue",
+    title: "What does JS stand for?",
+    choices: ["Java Sauce", "Java Script", "Jeva Script", "Jazzy Style"],
+    answer: "Java Script",
   },
   {
-    title: "what is your favorite color4?",
-    choices: ["red", "green", "blue", "orange"],
-    answer: "orange",
+    title: "What is the correct tag for the largest heading? ",
+    choices: ["head", "script", "h1", "h6"],
+    answer: "h1",
   },
 ];
 
@@ -39,8 +39,10 @@ document.querySelector("#startButton").addEventListener("click", () => {
     //show the time time on the ui
     document.querySelector("#timer").textContent = time;
     //check if time is end
-    if (time <= 0) {
+    if (time === 0) {   
       endGame();
+      alert("You're out of time!");
+      clearInterval(timer)
     }
   }, 1000);
   //generate the next question
@@ -69,6 +71,7 @@ document.querySelector("#game-container").addEventListener("click", (event) => {
     //check if the answer is correct
     if (event.target.textContent === questions[qCount].answer) {
       score++
+      time += 5
     } else {
       time -= 5
     }
@@ -87,19 +90,19 @@ const endGame = () => {
     document.querySelector("#game-container").classList.add("hidden");
     //show the end screen
     document.querySelector("#end-container").classList.remove("hidden");
-    //show the wcore
+    //show the score
     document.querySelector("#displayScore").textContent = score;
 }
 
 document.querySelector("#submitID").addEventListener("click", () => {
     //get the value from the input
-    const initals = document.querySelector("#initals").value
-    //get the old data from the local if it iesxists
+    const initials = document.querySelector("#initials").value
+    //get the old data from the local if it exists
     const data = JSON.parse(localStorage.getItem("data")) || [];
-    //contruct a new data entry
+    //construct a new data entry
     const newDataEntry = {
-        name: initals,
-        score: score
+        name: initials,
+        score: score,
     }
     //update the old data with new entry
     data.push(newDataEntry);
