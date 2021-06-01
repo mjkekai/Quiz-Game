@@ -1,3 +1,4 @@
+
 # Quiz-Game
 
 # Description
@@ -16,6 +17,11 @@ IF I am able to answer all questions correctly the game will end and i am able t
 IF I am unable to answer all question and timer runs out the game will end and i am able to enter my name an log my score
 
 # Screen Shots
+<img width="1440" alt="Screen Shot 2021-05-31 at 10 24 49 PM" src="https://user-images.githubusercontent.com/78839909/120270938-39108e00-c25f-11eb-9fed-dc051ff4c899.png">
+
+<img width="1440" alt="Screen Shot 2021-05-31 at 10 24 52 PM" src="https://user-images.githubusercontent.com/78839909/120270958-43cb2300-c25f-11eb-9d04-73f187088acc.png">
+
+<img width="1440" alt="Screen Shot 2021-05-31 at 10 25 57 PM" src="https://user-images.githubusercontent.com/78839909/120270989-50e81200-c25f-11eb-88b4-282b821ed4d1.png">
 
 # Tech Used
 
