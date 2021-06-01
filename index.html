@@ -1,45 +1,42 @@
 <!DOCTYPE html>
 <html>
-<head>
-<meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Quiz Game</title>
-<link rel="stylesheet" type="text/css" href="assets/style.css"/>
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Quiz Game</title>
+    <link rel="stylesheet" type="text/css" href="assets/style.css" />
+  </head>
 
-<body>
+  <body>
     <main>
-<div class="container">
-    <header class="header">
-        <div id="home" class="flex-colum flex-center">
-            <h1>Javascript Quiz Game</h1>
-        </div>
-        <span id="timer"></span>
-    </header>
-    <section id="game-container" class="hidden">
-    <div id="questions"></div>
-    <div id="answers" class="buttonSelector"></div>
-</section>
-<section class="score">
-    <div id="scoreCount" class="hidden"></div>
-</section>
-   <div>
-     <button id="startButton" class="btn">Play</button>
-     <button id="highscore-btn" class="btn">Hight Scores</button>
-    </div>
-</div>
-<div id="highScores" class="hidden">
-<span id="displayScore" class="hidden"></span>
-<input type="text" name="initals" id="initals">
-<button id="submitID" class="submitScore">Submit</button>
+      <span id="timer">75</span>
+      <div class="container">
+        <section id="start-container">
+          <header class="header">
+            <div id="home" class="flex-colum flex-center">
+              <h1>Javascript Quiz Game</h1>
+            </div>
+          </header>
+          <div>
+            <button id="startButton" class="btn">Play</button>
+            <button id="highscore-btn" class="btn">High Scores</button>
+          </div>
+        </section>
+        <section id="game-container" class="hidden">
+          <div id="questions"></div>
+          <div id="answers" class="buttonSelector"></div>
+        </section>
+        <section id="end-container" class="hidden">
+          <div id="highScores" >
+            <span id="displayScore"></span>
+            <input type="text" name="initals" id="initals" />
+            <button id="submitID" class="submitScore">Submit</button>
+          </div>
+          <div id="scoreCount" ></div>
+        </section>
+      </div>
+    </main>
+  </body>
 
-</div>
-</main>
-</body>
-
-
-
-
-<script src="assets/script.js"></script>
-
+  <script src="assets/script.js"></script>
 </html>

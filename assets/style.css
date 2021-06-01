@@ -9,6 +9,7 @@
   font-size: 62.5%;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  color: #ffffff;
 }
 
 h1 {
@@ -93,4 +94,8 @@ h2 {
 
 #highscore-btn:hover {
   box-shadow: 0 0.4rem 1.4rem 0 rgba(245, 11, 214, 0.603);
+}
+
+#submitID {
+  color: rgb(0, 0, 0);
 }
